@@ -312,20 +312,20 @@ public class _ {
 
     public static void msg(String m) {
         if (Analyzer.self != null && !Analyzer.self.hasOption("quiet")) {
-            System.out.println(m);
+            System.err.println(m);
         }
     }
 
 
     public static void msg_(String m) {
         if (Analyzer.self != null && !Analyzer.self.hasOption("quiet")) {
-            System.out.print(m);
+            System.err.print(m);
         }
     }
 
 
     public static void testmsg(String m) {
-        System.out.println(m);
+        System.err.println(m);
     }
 
 

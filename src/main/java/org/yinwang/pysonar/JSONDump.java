@@ -221,7 +221,7 @@ public class JSONDump {
 
 
     private static void info(Object msg) {
-        System.out.println(msg);
+        System.err.println(msg);
     }
 
 
