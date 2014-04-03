@@ -1,5 +1,6 @@
 package org.yinwang.pysonar;
 
+import com.google.common.io.ByteStreams;
 import com.fasterxml.jackson.core.JsonFactory;
 import com.fasterxml.jackson.core.JsonGenerator;
 import com.google.common.collect.Lists;
@@ -229,7 +230,7 @@ public class JSONDump {
         info("Usage: java org.yinwang.pysonar.dump <source-path> <include-paths> <out-root> [verbose]");
         info("  <source-path> is path to source unit (package directory or module file) that will be graphed");
         info("  <include-paths> are colon-separated paths to included libs");
-        info("  <out-root> is the prefix of the output files.  There are 3 output files: <out-root>-doc, <out-root>-sym, <out-root>-ref");
+        info("  <out-root> is the prefix of the output files.  There are 3 output files: <out-root>-doc, <out-root>-sym, <out-root>-ref.  If no output file root is specified, then output is dumped to stdout in the format {\"syms\": [...], \"refs\": [...], \"docs\": [...]}");
         info("  [verbose] if set, then verbose logging is used (optional)");
     }
 
@@ -247,23 +248,37 @@ public class JSONDump {
             log.info("ARGS: " + Arrays.toString(args));
         }
 
+        // Get arguments
         String srcpath = args[0];
         String[] inclpaths = args[1].split(":");
         String outroot = args[2];
 
-        String symFilename = outroot + "-sym";
-        String refFilename = outroot + "-ref";
-        String docFilename = outroot + "-doc";
         OutputStream symOut = null, refOut = null, docOut = null;
+        File symFile = null, refFile = null, docFile = null;
+        boolean bStdout = outroot.equals("");
         try {
-            docOut = new BufferedOutputStream(new FileOutputStream(docFilename));
-            symOut = new BufferedOutputStream(new FileOutputStream(symFilename));
-            refOut = new BufferedOutputStream(new FileOutputStream(refFilename));
+            // Create output filestreams
+            if (bStdout) {
+                symFile = File.createTempFile("pysonar-sym", "");
+                refFile = File.createTempFile("pysonar-ref", "");
+                docFile = File.createTempFile("pysonar-doc", "");
+                docFile.deleteOnExit();
+                symFile.deleteOnExit();
+                refFile.deleteOnExit();
+                docOut = new BufferedOutputStream(new FileOutputStream(docFile));
+                symOut = new BufferedOutputStream(new FileOutputStream(symFile));
+                refOut = new BufferedOutputStream(new FileOutputStream(refFile));
+            } else {
+                String symFilename = outroot + "-sym";
+                String refFilename = outroot + "-ref";
+                String docFilename = outroot + "-doc";
+                docOut = new BufferedOutputStream(new FileOutputStream(docFilename));
+                symOut = new BufferedOutputStream(new FileOutputStream(symFilename));
+                refOut = new BufferedOutputStream(new FileOutputStream(refFilename));
+            }
+
             _.msg("graphing: " + srcpath);
             graph(srcpath, inclpaths, symOut, refOut, docOut);
-            docOut.flush();
-            symOut.flush();
-            refOut.flush();
         } catch (FileNotFoundException e) {
             System.err.println("Could not find file: " + e);
             return;
@@ -279,5 +294,20 @@ public class JSONDump {
             }
         }
         log.info("SUCCESS");
+
+        // If no output file root specified, consolidate and print to stdout
+        if (bStdout) {
+            InputStream symIn = new BufferedInputStream(new FileInputStream(symFile));
+            InputStream docIn = new BufferedInputStream(new FileInputStream(docFile));
+            InputStream refIn = new BufferedInputStream(new FileInputStream(refFile));
+
+            System.out.print("{\"syms\":");
+            ByteStreams.copy(symIn, System.out);
+            System.out.print(",\"refs\":");
+            ByteStreams.copy(refIn, System.out);
+            System.out.print(",\"docs\":");
+            ByteStreams.copy(docIn, System.out);
+            System.out.print("}");
+        }
     }
 }
