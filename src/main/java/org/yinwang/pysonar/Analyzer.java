@@ -42,7 +42,6 @@ public class Analyzer {
     public Set<String> failedToParse = new HashSet<>();
     public Stats stats = new Stats();
     public Builtins builtins;
-    private Progress loadingProgress = null;
 
     public String projectDir;
     public String modelDir;
@@ -325,7 +324,7 @@ public class Analyzer {
 
     @Nullable
     private Type parseAndResolve(String file) {
-        loadingProgress.tick();
+        _.msg("Parsing and resolving file " + file);
 
         try {
             Node ast = getAstForFile(file);
@@ -502,9 +501,6 @@ public class Analyzer {
      */
     public void loadFileRecursive(String fullname) {
         int count = countFileRecursive(fullname);
-        if (loadingProgress == null) {
-            loadingProgress = new Progress(count, 50);
-        }
 
         File file_or_dir = new File(fullname);
 
@@ -542,6 +538,7 @@ public class Analyzer {
         _.msg("\nFinished loading files. " + nCalled + " functions were called.");
         _.msg("Analyzing uncalled functions");
         applyUncalled();
+        _.msg("Analyzed uncalled functions");
 
         // mark unused variables
         for (Binding b : allBindings) {
@@ -576,13 +573,10 @@ public class Analyzer {
 
 
     public void applyUncalled() {
-        Progress progress = new Progress(uncalled.size(), 50);
-
         while (!uncalled.isEmpty()) {
             List<FunType> uncalledDup = new ArrayList<>(uncalled);
 
             for (FunType cl : uncalledDup) {
-                progress.tick();
                 Call.apply(cl, null, null, null, null, null);
             }
         }
