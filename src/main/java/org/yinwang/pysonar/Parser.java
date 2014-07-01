@@ -109,8 +109,15 @@ public class Parser {
 
         if (type.equals("alias")) {         // lower case alias
             String qname = (String) map.get("name");
-            List<Name> names = segmentQname(qname, start + "import ".length(), false);
+            List<Name> names = segmentQname(qname, start, true);
+
             Name asname = map.get("asname") == null ? null : new Name((String) map.get("asname"));
+            if (asname != null) {
+                asname.start = start + qname.length() + " as ".length();
+                asname.end = asname.start + asname.id.length();
+                asname.file = file;
+            }
+
             return new Alias(names, asname, file, start, end);
         }
 

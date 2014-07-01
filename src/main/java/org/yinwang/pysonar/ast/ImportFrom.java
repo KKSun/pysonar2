@@ -48,6 +48,7 @@ public class ImportFrom extends Node {
                 Name first = a.name.get(0);
                 Set<Binding> bs = mod.table.lookup(first.id);
                 if (bs != null) {
+                    // TODO: emit both reference for name and asname?
                     if (a.asname != null) {
                         s.update(a.asname.id, bs);
                         Analyzer.self.putRef(a.asname, bs);

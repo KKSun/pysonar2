@@ -159,6 +159,10 @@ def find_start(node, s):
         if node != []:
             ret = find_start(node[0], s)
 
+    elif isinstance(node, alias):
+        # this is handled by the Import and ImportFrom cases
+        return None
+
     elif isinstance(node, Module):
         if node.body != []:
             ret = find_start(node.body[0], s)
@@ -186,6 +190,22 @@ def find_start(node, s):
 
     if isinstance(node, AST) and ret != None:
         node.start = ret
+
+    # Handle imported names (note: ignores as-names; these are handled by the caller of this script (in Parser.java))
+    if isinstance(node, Import):
+        nameOffset = 0
+        for nameNode in node.names:
+            nameNode.start = ret + len('import ') + nameOffset
+            nameOffset += len(nameNode.name) + 2 # assume names are separated by ', '
+            if nameNode.asname is not None:
+                nameOffset += len(' as ') + len(nameNode.asname)
+    elif isinstance(node, ImportFrom):
+        nameOffset = 0
+        for nameNode in node.names:
+            nameNode.start = ret + len('from ') + node.level + len(node.module) + 1 + len(' import ') + nameOffset
+            nameOffset += len(nameNode.name) + 2 # assume names are separated by ', '
+            if nameNode.asname is not None:
+                nameOffset += len(' as ') + len(nameNode.asname)
 
     return ret
 
@@ -333,6 +353,10 @@ def find_end(node, s):
 
     elif isinstance(node, ImportFrom):
         the_end = find_start(node, s) + len('from')
+
+    elif isinstance(node, alias): # (note: assumes find_start has already been called)
+        if 'start' in dir(node):
+            node.end = node.start + len(node.name)
 
     else:   # can't determine node end, set to 3 chars after start
         start = find_start(node, s)
