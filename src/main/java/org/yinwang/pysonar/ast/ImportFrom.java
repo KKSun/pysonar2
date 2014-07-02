@@ -44,7 +44,14 @@ public class ImportFrom extends Node {
         }
 
         // Handle from clause
-
+        for (int i = 1; i <= this.module.size(); i++) {
+            List<Name> qname = this.module.subList(0, i);
+            if (this.module.size() == qname.size()) { // when we're dealing with the full module name
+                Import.handleModuleName(this, qname, s, null, true);
+            } else {
+                Import.handleModuleName(this, qname, s, null, false);
+            }
+        }
 
         // Handle import clause
         if (isImportStar()) {

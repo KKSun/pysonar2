@@ -1,6 +1,38 @@
 [
   {
     "ref": {
+      "name": "kitchen",
+      "file": "import-pizza-from-oven.py",
+      "start": 55,
+      "end": 62
+    },
+    "dests": [
+      {
+        "name": "kitchen",
+        "file": "kitchen/__init__.py",
+        "start": 0,
+        "end": 0
+      }
+    ]
+  },
+  {
+    "ref": {
+      "name": "oven",
+      "file": "import-pizza-from-oven.py",
+      "start": 63,
+      "end": 67
+    },
+    "dests": [
+      {
+        "name": "oven",
+        "file": "kitchen/oven.py",
+        "start": 0,
+        "end": 0
+      }
+    ]
+  },
+  {
+    "ref": {
       "name": "Pizza",
       "file": "import-pizza-from-oven.py",
       "start": 76,
@@ -92,6 +124,38 @@
         "file": "import-pizza-from-oven.py",
         "start": 177,
         "end": 181
+      }
+    ]
+  },
+  {
+    "ref": {
+      "name": "kitchen",
+      "file": "import-star-from-oven.py",
+      "start": 37,
+      "end": 44
+    },
+    "dests": [
+      {
+        "name": "kitchen",
+        "file": "kitchen/__init__.py",
+        "start": 0,
+        "end": 0
+      }
+    ]
+  },
+  {
+    "ref": {
+      "name": "oven",
+      "file": "import-star-from-oven.py",
+      "start": 45,
+      "end": 49
+    },
+    "dests": [
+      {
+        "name": "oven",
+        "file": "kitchen/oven.py",
+        "start": 0,
+        "end": 0
       }
     ]
   },
@@ -273,6 +337,22 @@
   },
   {
     "ref": {
+      "name": "kitchen",
+      "file": "import-oven.py",
+      "start": 42,
+      "end": 49
+    },
+    "dests": [
+      {
+        "name": "kitchen",
+        "file": "kitchen/__init__.py",
+        "start": 0,
+        "end": 0
+      }
+    ]
+  },
+  {
+    "ref": {
       "name": "oven",
       "file": "import-oven.py",
       "start": 58,
@@ -412,6 +492,22 @@
         "file": "kitchen/oven.py",
         "start": 44,
         "end": 48
+      }
+    ]
+  },
+  {
+    "ref": {
+      "name": "kitchen",
+      "file": "import-star-from-init.py",
+      "start": 53,
+      "end": 60
+    },
+    "dests": [
+      {
+        "name": "kitchen",
+        "file": "kitchen/__init__.py",
+        "start": 0,
+        "end": 0
       }
     ]
   },

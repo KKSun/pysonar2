@@ -302,5 +302,261 @@
         "end": 29
       }
     ]
+  },
+  {
+    "ref": {
+      "name": "b",
+      "file": "a.py",
+      "start": 108,
+      "end": 109
+    },
+    "dests": [
+      {
+        "name": "b",
+        "file": "b.py",
+        "start": 0,
+        "end": 0
+      }
+    ]
+  },
+  {
+    "ref": {
+      "name": "func",
+      "file": "a.py",
+      "start": 118,
+      "end": 122
+    },
+    "dests": [
+      {
+        "name": "func",
+        "file": "b.py",
+        "start": 4,
+        "end": 8
+      }
+    ]
+  },
+  {
+    "ref": {
+      "name": "b",
+      "file": "a.py",
+      "start": 127,
+      "end": 128
+    },
+    "dests": [
+      {
+        "name": "b",
+        "file": "b.py",
+        "start": 0,
+        "end": 0
+      }
+    ]
+  },
+  {
+    "ref": {
+      "name": "func",
+      "file": "a.py",
+      "start": 137,
+      "end": 141
+    },
+    "dests": [
+      {
+        "name": "func",
+        "file": "b.py",
+        "start": 4,
+        "end": 8
+      }
+    ]
+  },
+  {
+    "ref": {
+      "name": "f",
+      "file": "a.py",
+      "start": 145,
+      "end": 146
+    },
+    "dests": [
+      {
+        "name": "func",
+        "file": "b.py",
+        "start": 4,
+        "end": 8
+      }
+    ]
+  },
+  {
+    "ref": {
+      "name": "b",
+      "file": "a.py",
+      "start": 151,
+      "end": 152
+    },
+    "dests": [
+      {
+        "name": "b",
+        "file": "b.py",
+        "start": 0,
+        "end": 0
+      }
+    ]
+  },
+  {
+    "ref": {
+      "name": "func",
+      "file": "a.py",
+      "start": 161,
+      "end": 165
+    },
+    "dests": [
+      {
+        "name": "func",
+        "file": "b.py",
+        "start": 4,
+        "end": 8
+      }
+    ]
+  },
+  {
+    "ref": {
+      "name": "f",
+      "file": "a.py",
+      "start": 169,
+      "end": 170
+    },
+    "dests": [
+      {
+        "name": "func",
+        "file": "b.py",
+        "start": 4,
+        "end": 8
+      }
+    ]
+  },
+  {
+    "ref": {
+      "name": "C",
+      "file": "a.py",
+      "start": 172,
+      "end": 173
+    },
+    "dests": [
+      {
+        "name": "C",
+        "file": "b.py",
+        "start": 28,
+        "end": 29
+      }
+    ]
+  },
+  {
+    "ref": {
+      "name": "b",
+      "file": "a.py",
+      "start": 178,
+      "end": 179
+    },
+    "dests": [
+      {
+        "name": "b",
+        "file": "b.py",
+        "start": 0,
+        "end": 0
+      }
+    ]
+  },
+  {
+    "ref": {
+      "name": "c",
+      "file": "a.py",
+      "start": 194,
+      "end": 195
+    },
+    "dests": [
+      {
+        "name": "c",
+        "file": "c/__init__.py",
+        "start": 0,
+        "end": 0
+      }
+    ]
+  },
+  {
+    "ref": {
+      "name": "d",
+      "file": "a.py",
+      "start": 204,
+      "end": 205
+    },
+    "dests": [
+      {
+        "name": "d",
+        "file": "a.py",
+        "start": 79,
+        "end": 80
+      }
+    ]
+  },
+  {
+    "ref": {
+      "name": "func",
+      "file": "a.py",
+      "start": 206,
+      "end": 210
+    },
+    "dests": [
+      {
+        "name": "func",
+        "file": "b.py",
+        "start": 4,
+        "end": 8
+      }
+    ]
+  },
+  {
+    "ref": {
+      "name": "f",
+      "file": "a.py",
+      "start": 213,
+      "end": 214
+    },
+    "dests": [
+      {
+        "name": "func",
+        "file": "b.py",
+        "start": 4,
+        "end": 8
+      }
+    ]
+  },
+  {
+    "ref": {
+      "name": "C",
+      "file": "a.py",
+      "start": 217,
+      "end": 218
+    },
+    "dests": [
+      {
+        "name": "C",
+        "file": "b.py",
+        "start": 28,
+        "end": 29
+      }
+    ]
+  },
+  {
+    "ref": {
+      "name": "d",
+      "file": "a.py",
+      "start": 221,
+      "end": 222
+    },
+    "dests": [
+      {
+        "name": "d",
+        "file": "a.py",
+        "start": 79,
+        "end": 80
+      }
+    ]
   }
 ]
