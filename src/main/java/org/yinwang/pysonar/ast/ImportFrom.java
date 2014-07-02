@@ -38,23 +38,27 @@ public class ImportFrom extends Node {
         }
 
         Type mod = Analyzer.self.loadModule(module, s);
-
-        if (mod == null) {
+        if (null == mod) {
             Analyzer.self.putProblem(this, "Cannot load module");
-        } else if (isImportStar()) {
+            return Type.CONT;
+        }
+
+        // Handle from clause
+
+
+        // Handle import clause
+        if (isImportStar()) {
             importStar(s, mod);
         } else {
             for (Alias a : names) {
                 Name first = a.name.get(0);
                 Set<Binding> bs = mod.table.lookup(first.id);
                 if (bs != null) {
-                    // TODO: emit both reference for name and asname?
-                    if (a.asname != null) {
+                    s.update(first.id, bs); // name reference
+                    Analyzer.self.putRef(first, bs);
+                    if (a.asname != null) { // as-name reference
                         s.update(a.asname.id, bs);
                         Analyzer.self.putRef(a.asname, bs);
-                    } else {
-                        s.update(first.id, bs);
-                        Analyzer.self.putRef(first, bs);
                     }
                 } else {
                     List<Name> ext = new ArrayList<>(module);
