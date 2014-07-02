@@ -40,7 +40,19 @@ the following command line:
 This will take a few minutes. You should find some interactive HTML files inside
 the _html_ directory after this process.
 
+To get a JSON dump of the information PySonar2 outputs, run:
 
+    java -classpath ./target/pysonar-2.0-SNAPSHOT.jar org.yinwang.pysonar.JSONDump path/to/directory/containing/python/code '' ''
+
+#### Tests
+
+After building, run `java -classpath ./target/pysonar-2.0-SNAPSHOT.jar org.yinwang.pysonar.Test ./tests`.
+
+##### Development tips
+
+PySonar2 outputs an AST cache to the directory `/tmp/pysonar2` (or `/<TEMPDIR>/pysonar2` where `TEMPDIR` is your
+system's standard temp directory. Be sure to remove this directory when making changes and re-running PySonar2 commands
+(including tests).
 
 #### System requirements
 
