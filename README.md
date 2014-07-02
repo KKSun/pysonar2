@@ -48,6 +48,9 @@ To get a JSON dump of the information PySonar2 outputs, run:
 
 After building, run `java -classpath ./target/pysonar-2.0-SNAPSHOT.jar org.yinwang.pysonar.Test ./tests`.
 
+To re-generate expected test output, run `java -classpath ./target/pysonar-2.0-SNAPSHOT.jar org.yinwang.pysonar.Test
+./tests -exp true`.
+
 ##### Development tips
 
 PySonar2 outputs an AST cache to the directory `/tmp/pysonar2` (or `/<TEMPDIR>/pysonar2` where `TEMPDIR` is your
