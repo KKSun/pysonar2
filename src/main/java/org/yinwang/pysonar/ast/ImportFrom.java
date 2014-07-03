@@ -37,6 +37,8 @@ public class ImportFrom extends Node {
             return Type.CONT;
         }
 
+        // TODO: handle relative imports properly (both mod and .mod syntax)
+
         Type mod = Analyzer.self.loadModule(module, s);
         if (null == mod) {
             Analyzer.self.putProblem(this, "Cannot load module");
