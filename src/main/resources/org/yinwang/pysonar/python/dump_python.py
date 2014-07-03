@@ -201,8 +201,11 @@ def find_start(node, s):
                 nameOffset += len(' as ') + len(nameNode.asname)
     elif isinstance(node, ImportFrom):
         nameOffset = 0
+        startOffset = ret + len('from ') + node.level + len(' import ')
+        if node.module is not None:
+            startOffset += len(node.module)
         for nameNode in node.names:
-            nameNode.start = ret + len('from ') + node.level + len(node.module) + len(' import ') + nameOffset
+            nameNode.start = startOffset + nameOffset
             nameOffset += len(nameNode.name) + 2 # assume names are separated by ', '
             if nameNode.asname is not None:
                 nameOffset += len(' as ') + len(nameNode.asname)

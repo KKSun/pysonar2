@@ -606,5 +606,69 @@
         "end": 80
       }
     ]
+  },
+  {
+    "ref": {
+      "name": "b",
+      "file": "a.py",
+      "start": 295,
+      "end": 296
+    },
+    "dests": [
+      {
+        "name": "b",
+        "file": "b.py",
+        "start": 0,
+        "end": 0
+      }
+    ]
+  },
+  {
+    "ref": {
+      "name": "func",
+      "file": "a.py",
+      "start": 304,
+      "end": 308
+    },
+    "dests": [
+      {
+        "name": "func",
+        "file": "b.py",
+        "start": 4,
+        "end": 8
+      }
+    ]
+  },
+  {
+    "ref": {
+      "name": "g",
+      "file": "a.py",
+      "start": 312,
+      "end": 313
+    },
+    "dests": [
+      {
+        "name": "func",
+        "file": "b.py",
+        "start": 4,
+        "end": 8
+      }
+    ]
+  },
+  {
+    "ref": {
+      "name": "g",
+      "file": "a.py",
+      "start": 314,
+      "end": 315
+    },
+    "dests": [
+      {
+        "name": "func",
+        "file": "b.py",
+        "start": 4,
+        "end": 8
+      }
+    ]
   }
 ]

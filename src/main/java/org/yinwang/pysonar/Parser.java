@@ -854,14 +854,14 @@ public class Parser {
         } else if (python3Process != null) {
             Node node3 = parseFileInner(filename, python3Process);
             if (node3 == null) {
-                _.msg("failed to parse: " + filename);
+                _.msg("failed to parse: " + filename + " (check dump_python.py log file)");
                 Analyzer.self.failedToParse.add(filename);
                 return null;
             } else {
                 return node3;
             }
         } else {
-            _.msg("failed to parse: " + filename);
+            _.msg("failed to parse: " + filename + " (check dump_python.py log file)");
             Analyzer.self.failedToParse.add(filename);
             return null;
         }
@@ -870,8 +870,6 @@ public class Parser {
 
     @Nullable
     public Node parseFileInner(String filename, @NotNull Process pythonProcess) {
-//        _.msg("parsing: " + filename);
-
         File exchange = new File(exchangeFile);
         File marker = new File(endMark);
         cleanTemp();

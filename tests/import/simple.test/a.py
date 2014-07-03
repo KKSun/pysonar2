@@ -19,3 +19,9 @@ func()
 f()
 C()
 d
+
+# from . import b as b_alias
+# from . import *
+from .b import func as g
+g()
+# b_alias.func()
