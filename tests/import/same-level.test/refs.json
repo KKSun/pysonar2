@@ -3,6 +3,22 @@
     "ref": {
       "name": "mod2",
       "file": "mod1.py",
+      "start": 7,
+      "end": 11
+    },
+    "dests": [
+      {
+        "name": "mod2",
+        "file": "mod2.py",
+        "start": 0,
+        "end": 0
+      }
+    ]
+  },
+  {
+    "ref": {
+      "name": "mod2",
+      "file": "mod1.py",
       "start": 17,
       "end": 21
     },
@@ -10,8 +26,8 @@
       {
         "name": "mod2",
         "file": "mod1.py",
-        "start": -1,
-        "end": -1
+        "start": 7,
+        "end": 11
       }
     ]
   },

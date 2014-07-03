@@ -1,129 +1,33 @@
 [
   {
     "ref": {
-      "name": "oven",
-      "file": "import-oven.py",
-      "start": 71,
-      "end": 75
+      "name": "kitchen",
+      "file": "import-pizza-from-oven.py",
+      "start": 55,
+      "end": 62
     },
     "dests": [
       {
-        "name": "oven",
-        "file": "import-oven.py",
-        "start": -1,
-        "end": -1
-      }
-    ]
-  },
-  {
-    "ref": {
-      "name": "Pizza",
-      "file": "import-oven.py",
-      "start": 76,
-      "end": 81
-    },
-    "dests": [
-      {
-        "name": "Pizza",
-        "file": "kitchen/oven.py",
-        "start": 6,
-        "end": 11
-      }
-    ]
-  },
-  {
-    "ref": {
-      "name": "pizza",
-      "file": "import-oven.py",
-      "start": 90,
-      "end": 95
-    },
-    "dests": [
-      {
-        "name": "pizza",
-        "file": "import-oven.py",
-        "start": 63,
-        "end": 68
-      }
-    ]
-  },
-  {
-    "ref": {
-      "name": "size",
-      "file": "import-oven.py",
-      "start": 96,
-      "end": 100
-    },
-    "dests": [
-      {
-        "name": "size",
-        "file": "kitchen/oven.py",
-        "start": 15,
-        "end": 19
+        "name": "kitchen",
+        "file": "kitchen/__init__.py",
+        "start": 0,
+        "end": 0
       }
     ]
   },
   {
     "ref": {
       "name": "oven",
-      "file": "import-oven.py",
-      "start": 110,
-      "end": 114
+      "file": "import-pizza-from-oven.py",
+      "start": 63,
+      "end": 67
     },
     "dests": [
       {
         "name": "oven",
-        "file": "import-oven.py",
-        "start": -1,
-        "end": -1
-      }
-    ]
-  },
-  {
-    "ref": {
-      "name": "Bread",
-      "file": "import-oven.py",
-      "start": 115,
-      "end": 120
-    },
-    "dests": [
-      {
-        "name": "Bread",
         "file": "kitchen/oven.py",
-        "start": 35,
-        "end": 40
-      }
-    ]
-  },
-  {
-    "ref": {
-      "name": "bread",
-      "file": "import-oven.py",
-      "start": 129,
-      "end": 134
-    },
-    "dests": [
-      {
-        "name": "bread",
-        "file": "import-oven.py",
-        "start": 102,
-        "end": 107
-      }
-    ]
-  },
-  {
-    "ref": {
-      "name": "size",
-      "file": "import-oven.py",
-      "start": 135,
-      "end": 139
-    },
-    "dests": [
-      {
-        "name": "size",
-        "file": "kitchen/oven.py",
-        "start": 44,
-        "end": 48
+        "start": 0,
+        "end": 0
       }
     ]
   },
@@ -131,8 +35,8 @@
     "ref": {
       "name": "Pizza",
       "file": "import-pizza-from-oven.py",
-      "start": -1,
-      "end": -1
+      "start": 76,
+      "end": 81
     },
     "dests": [
       {
@@ -225,81 +129,33 @@
   },
   {
     "ref": {
-      "name": "spoon",
-      "file": "import-star-from-init.py",
-      "start": 71,
-      "end": 76
+      "name": "kitchen",
+      "file": "import-star-from-oven.py",
+      "start": 37,
+      "end": 44
     },
     "dests": [
       {
-        "name": "spoon",
+        "name": "kitchen",
         "file": "kitchen/__init__.py",
-        "start": 58,
-        "end": 63
+        "start": 0,
+        "end": 0
       }
     ]
   },
   {
     "ref": {
-      "name": "x",
-      "file": "kitchen/__init__.py",
-      "start": 79,
-      "end": 80
+      "name": "oven",
+      "file": "import-star-from-oven.py",
+      "start": 45,
+      "end": 49
     },
     "dests": [
       {
-        "name": "x",
-        "file": "kitchen/__init__.py",
-        "start": 64,
-        "end": 65
-      }
-    ]
-  },
-  {
-    "ref": {
-      "name": "fork",
-      "file": "import-star-from-init.py",
-      "start": 80,
-      "end": 84
-    },
-    "dests": [
-      {
-        "name": "fork",
-        "file": "kitchen/__init__.py",
-        "start": 87,
-        "end": 91
-      }
-    ]
-  },
-  {
-    "ref": {
-      "name": "x",
-      "file": "kitchen/__init__.py",
-      "start": 108,
-      "end": 109
-    },
-    "dests": [
-      {
-        "name": "x",
-        "file": "kitchen/__init__.py",
-        "start": 92,
-        "end": 93
-      }
-    ]
-  },
-  {
-    "ref": {
-      "name": "x",
-      "file": "kitchen/__init__.py",
-      "start": 110,
-      "end": 111
-    },
-    "dests": [
-      {
-        "name": "x",
-        "file": "kitchen/__init__.py",
-        "start": 92,
-        "end": 93
+        "name": "oven",
+        "file": "kitchen/oven.py",
+        "start": 0,
+        "end": 0
       }
     ]
   },
@@ -476,6 +332,262 @@
         "file": "import-star-from-oven.py",
         "start": 149,
         "end": 154
+      }
+    ]
+  },
+  {
+    "ref": {
+      "name": "kitchen",
+      "file": "import-oven.py",
+      "start": 42,
+      "end": 49
+    },
+    "dests": [
+      {
+        "name": "kitchen",
+        "file": "kitchen/__init__.py",
+        "start": 0,
+        "end": 0
+      }
+    ]
+  },
+  {
+    "ref": {
+      "name": "oven",
+      "file": "import-oven.py",
+      "start": 58,
+      "end": 62
+    },
+    "dests": [
+      {
+        "name": "oven",
+        "file": "import-star-from-oven.py",
+        "start": 45,
+        "end": 49
+      }
+    ]
+  },
+  {
+    "ref": {
+      "name": "oven",
+      "file": "import-oven.py",
+      "start": 71,
+      "end": 75
+    },
+    "dests": [
+      {
+        "name": "oven",
+        "file": "import-star-from-oven.py",
+        "start": 45,
+        "end": 49
+      }
+    ]
+  },
+  {
+    "ref": {
+      "name": "Pizza",
+      "file": "import-oven.py",
+      "start": 76,
+      "end": 81
+    },
+    "dests": [
+      {
+        "name": "Pizza",
+        "file": "kitchen/oven.py",
+        "start": 6,
+        "end": 11
+      }
+    ]
+  },
+  {
+    "ref": {
+      "name": "pizza",
+      "file": "import-oven.py",
+      "start": 90,
+      "end": 95
+    },
+    "dests": [
+      {
+        "name": "pizza",
+        "file": "import-oven.py",
+        "start": 63,
+        "end": 68
+      }
+    ]
+  },
+  {
+    "ref": {
+      "name": "size",
+      "file": "import-oven.py",
+      "start": 96,
+      "end": 100
+    },
+    "dests": [
+      {
+        "name": "size",
+        "file": "kitchen/oven.py",
+        "start": 15,
+        "end": 19
+      }
+    ]
+  },
+  {
+    "ref": {
+      "name": "oven",
+      "file": "import-oven.py",
+      "start": 110,
+      "end": 114
+    },
+    "dests": [
+      {
+        "name": "oven",
+        "file": "import-star-from-oven.py",
+        "start": 45,
+        "end": 49
+      }
+    ]
+  },
+  {
+    "ref": {
+      "name": "Bread",
+      "file": "import-oven.py",
+      "start": 115,
+      "end": 120
+    },
+    "dests": [
+      {
+        "name": "Bread",
+        "file": "kitchen/oven.py",
+        "start": 35,
+        "end": 40
+      }
+    ]
+  },
+  {
+    "ref": {
+      "name": "bread",
+      "file": "import-oven.py",
+      "start": 129,
+      "end": 134
+    },
+    "dests": [
+      {
+        "name": "bread",
+        "file": "import-oven.py",
+        "start": 102,
+        "end": 107
+      }
+    ]
+  },
+  {
+    "ref": {
+      "name": "size",
+      "file": "import-oven.py",
+      "start": 135,
+      "end": 139
+    },
+    "dests": [
+      {
+        "name": "size",
+        "file": "kitchen/oven.py",
+        "start": 44,
+        "end": 48
+      }
+    ]
+  },
+  {
+    "ref": {
+      "name": "kitchen",
+      "file": "import-star-from-init.py",
+      "start": 53,
+      "end": 60
+    },
+    "dests": [
+      {
+        "name": "kitchen",
+        "file": "kitchen/__init__.py",
+        "start": 0,
+        "end": 0
+      }
+    ]
+  },
+  {
+    "ref": {
+      "name": "spoon",
+      "file": "import-star-from-init.py",
+      "start": 71,
+      "end": 76
+    },
+    "dests": [
+      {
+        "name": "spoon",
+        "file": "kitchen/__init__.py",
+        "start": 58,
+        "end": 63
+      }
+    ]
+  },
+  {
+    "ref": {
+      "name": "x",
+      "file": "kitchen/__init__.py",
+      "start": 79,
+      "end": 80
+    },
+    "dests": [
+      {
+        "name": "x",
+        "file": "kitchen/__init__.py",
+        "start": 64,
+        "end": 65
+      }
+    ]
+  },
+  {
+    "ref": {
+      "name": "fork",
+      "file": "import-star-from-init.py",
+      "start": 80,
+      "end": 84
+    },
+    "dests": [
+      {
+        "name": "fork",
+        "file": "kitchen/__init__.py",
+        "start": 87,
+        "end": 91
+      }
+    ]
+  },
+  {
+    "ref": {
+      "name": "x",
+      "file": "kitchen/__init__.py",
+      "start": 108,
+      "end": 109
+    },
+    "dests": [
+      {
+        "name": "x",
+        "file": "kitchen/__init__.py",
+        "start": 92,
+        "end": 93
+      }
+    ]
+  },
+  {
+    "ref": {
+      "name": "x",
+      "file": "kitchen/__init__.py",
+      "start": 110,
+      "end": 111
+    },
+    "dests": [
+      {
+        "name": "x",
+        "file": "kitchen/__init__.py",
+        "start": 92,
+        "end": 93
       }
     ]
   },

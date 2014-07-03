@@ -1,10 +1,42 @@
 [
   {
     "ref": {
+      "name": "foo",
+      "file": "baz/rel.py",
+      "start": 7,
+      "end": 10
+    },
+    "dests": [
+      {
+        "name": "foo",
+        "file": "foo/__init__.py",
+        "start": 0,
+        "end": 0
+      }
+    ]
+  },
+  {
+    "ref": {
+      "name": "bar",
+      "file": "baz/rel.py",
+      "start": 11,
+      "end": 14
+    },
+    "dests": [
+      {
+        "name": "bar",
+        "file": "foo/bar.py",
+        "start": 0,
+        "end": 0
+      }
+    ]
+  },
+  {
+    "ref": {
       "name": "f",
       "file": "baz/rel.py",
-      "start": -1,
-      "end": -1
+      "start": 23,
+      "end": 24
     },
     "dests": [
       {
