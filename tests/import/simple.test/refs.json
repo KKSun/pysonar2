@@ -323,8 +323,8 @@
     "ref": {
       "name": "func",
       "file": "a.py",
-      "start": 118,
-      "end": 122
+      "start": 117,
+      "end": 121
     },
     "dests": [
       {
@@ -355,8 +355,8 @@
     "ref": {
       "name": "func",
       "file": "a.py",
-      "start": 137,
-      "end": 141
+      "start": 136,
+      "end": 140
     },
     "dests": [
       {
@@ -371,8 +371,8 @@
     "ref": {
       "name": "f",
       "file": "a.py",
-      "start": 145,
-      "end": 146
+      "start": 144,
+      "end": 145
     },
     "dests": [
       {
@@ -403,8 +403,8 @@
     "ref": {
       "name": "func",
       "file": "a.py",
-      "start": 161,
-      "end": 165
+      "start": 160,
+      "end": 164
     },
     "dests": [
       {
@@ -419,8 +419,8 @@
     "ref": {
       "name": "f",
       "file": "a.py",
-      "start": 169,
-      "end": 170
+      "start": 168,
+      "end": 169
     },
     "dests": [
       {
@@ -435,8 +435,8 @@
     "ref": {
       "name": "C",
       "file": "a.py",
-      "start": 172,
-      "end": 173
+      "start": 171,
+      "end": 172
     },
     "dests": [
       {
@@ -483,8 +483,8 @@
     "ref": {
       "name": "d",
       "file": "a.py",
-      "start": 204,
-      "end": 205
+      "start": 203,
+      "end": 204
     },
     "dests": [
       {
@@ -531,8 +531,8 @@
     "ref": {
       "name": "v",
       "file": "a.py",
-      "start": 222,
-      "end": 223
+      "start": 221,
+      "end": 222
     },
     "dests": [
       {

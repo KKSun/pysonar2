@@ -35,8 +35,8 @@
     "ref": {
       "name": "Pizza",
       "file": "import-pizza-from-oven.py",
-      "start": 76,
-      "end": 81
+      "start": 75,
+      "end": 80
     },
     "dests": [
       {
@@ -355,8 +355,8 @@
     "ref": {
       "name": "oven",
       "file": "import-oven.py",
-      "start": 58,
-      "end": 62
+      "start": 57,
+      "end": 61
     },
     "dests": [
       {

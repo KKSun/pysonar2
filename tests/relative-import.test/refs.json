@@ -35,8 +35,8 @@
     "ref": {
       "name": "f",
       "file": "baz/rel.py",
-      "start": 23,
-      "end": 24
+      "start": 22,
+      "end": 23
     },
     "dests": [
       {
